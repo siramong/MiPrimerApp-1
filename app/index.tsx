@@ -1,5 +1,5 @@
 import { Text, View } from "react-native";
-import { WelcomeText } from "../components/WelcomeText"
+import WelcomeText from "../components/WelcomeText"
 
 export default function Index() {
   return (
