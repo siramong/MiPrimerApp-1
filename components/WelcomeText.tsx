@@ -1,6 +1,5 @@
-import { setBackgroundColorAsync } from 'expo-system-ui';
 import React, { useState } from 'react';
-import { Pressable, Text, View, Button } from 'react-native';
+import { Pressable, Text, View } from 'react-native';
 
 const WelcomeText = () => {
     const [cont, setCont] = useState(0);
@@ -11,6 +10,7 @@ const WelcomeText = () => {
 
     return (
         <View>
+            <Text>WelcomeText</Text>
             <Pressable onPress={() => setCont(incrementar(cont))}>
                 <Text>Aumentar: {cont}</Text>
             </Pressable>
