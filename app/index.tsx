@@ -1,17 +1,22 @@
-import { Text, View } from "react-native";
-import WelcomeText from "../components/WelcomeText"
+import { View, StyleSheet } from 'react-native'
+import React from 'react'
+import WelcomeText from '@/components/WelcomeText'
 
-export default function Index() {
+const index = () => {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Welcome to index.tsx</Text>
+    <View style={styles.container}>
       <WelcomeText />
     </View>
-  );
+  )
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: "#333640"
+},
+});
+
+export default index
