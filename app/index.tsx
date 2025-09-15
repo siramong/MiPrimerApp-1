@@ -1,22 +1,14 @@
-import { View, StyleSheet } from 'react-native'
-import React from 'react'
 import WelcomeText from '@/components/WelcomeText'
+import "@/global.css"
+import React from 'react'
+import { View } from 'react-native'
 
 const index = () => {
   return (
-    <View style={styles.container}>
+    <View className="bg-slate-900 flex justify-center items-center h-screen w-screen">
       <WelcomeText />
     </View>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: "#333640"
-},
-});
 
 export default index

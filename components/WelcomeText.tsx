@@ -1,7 +1,8 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
 import Ionicons from '@expo/vector-icons/AntDesign';
 import { useFonts } from 'expo-font';
+import React from 'react';
+import "@/global.css"
+import { Text, View } from 'react-native';
 
 const WelcomeText = () => {
     useFonts({
@@ -10,28 +11,11 @@ const WelcomeText = () => {
         'Urbanist-Black': require('../assets/fonts/Urbanist/Urbanist-Black.ttf'),
     });
     return (
-        <View style={styles.container}>
+        <View className='flex bg-indigo-500 items-center justify-center max-w-100 min-w-250 rounded-lg p-3'>
             <Ionicons name="github" size={32} color="#B4B9D9" />
-            <Text style={styles.text}>Bienvenido a mi App</Text>
+            <Text className='text-indigo-800 text-24 font-Urbanist-Regular'>Bienvenido a mi App</Text>
         </View>
     );
 };
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#3037BF',
-        alignItems: 'center',
-        justifyContent: 'center',
-        maxHeight: 100,
-        minWidth: 250,
-        borderRadius: 20,
-    },
-    text: {
-        color: '#B4B9D9',
-        fontSize: 24,
-        fontFamily: "Urbanist-Black"
-    },
-});
 
 export default WelcomeText;
